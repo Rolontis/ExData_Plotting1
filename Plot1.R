@@ -1,3 +1,10 @@
+## Install dplyr package if not installed and load the package
+if(("dplyr" %in% rownames(installed.packages())) == FALSE){
+                install.packages(dplyr)
+}
+
+library(dplyr)
+
 ## Download the zip file into Data folder
 download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "./Data/file.zip")
 unzip("./Data/file.zip", exdir = "./Data")
